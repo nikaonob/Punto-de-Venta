@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Datos;
 
 namespace Negocios
 {
-    public class Class1
+    public class conexionSQLN
     {
+        ConecxionSQL cn = new ConecxionSQL();
+
+        public int conSQL(string Usuario,string Contraseña)
+        {
+            return cn.consultalogin(Usuario, Contraseña);
+        }
     }
 }
