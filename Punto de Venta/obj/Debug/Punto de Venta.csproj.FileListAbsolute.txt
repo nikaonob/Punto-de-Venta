@@ -1,0 +1,11 @@
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.exe.config
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.exe
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\bin\Debug\Punto de Venta.pdb
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csproj.AssemblyReference.cache
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csproj.SuggestedBindingRedirects.cache
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Properties.Resources.resources
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csproj.GenerateResource.cache
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csproj.CoreCompileInputs.cache
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.exe
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.pdb
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Form1.resources
