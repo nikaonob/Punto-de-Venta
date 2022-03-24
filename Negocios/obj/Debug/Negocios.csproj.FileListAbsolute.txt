@@ -1,0 +1,9 @@
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\bin\Debug\Negocios.dll
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\bin\Debug\Negocios.pdb
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\bin\Debug\Datos.dll
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\bin\Debug\Datos.pdb
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\obj\Debug\Negocios.csproj.AssemblyReference.cache
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\obj\Debug\Negocios.dll
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\obj\Debug\Negocios.pdb

@@ -11,7 +11,7 @@ namespace Negocios
     {
         ConecxionSQL cn = new ConecxionSQL();
 
-        public int conSQL(string Usuario,string Contraseña)
+        public int consultaloginSQL(string Usuario,string Contraseña)
         {
             return cn.consultalogin(Usuario, Contraseña);
         }

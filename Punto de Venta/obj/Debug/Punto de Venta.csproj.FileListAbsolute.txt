@@ -9,3 +9,9 @@ D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.exe
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.pdb
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.Form1.resources
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\bin\Debug\Negocios.dll
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\bin\Debug\Datos.dll
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\bin\Debug\Negocios.pdb
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\bin\Debug\Datos.pdb
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csproj.CopyComplete
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.View.Ventana_Principal.resources

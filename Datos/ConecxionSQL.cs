@@ -10,16 +10,16 @@ namespace Datos
 {
     public class ConecxionSQL
     {
-        static string conecionstring = "server= localhost; database= PuntodeVenta;" +
-            "integrated security= true";
+        static string conecionstring = "server= DESKTOP-BC6IL40; database= PuntodeVenta;" +
+            " integrated security= true";
         SqlConnection con = new SqlConnection(conecionstring);
 
         public int consultalogin(string Usuario,string Contraseña)
         {
             int contador;
             con.Open();
-            string Query = "Select Count(*) from Usuario = '"+Usuario+"'" +
-                "and contraseña = '"+Contraseña+"'";
+            string Query = "Select Count(*) from usuario where Usuario = '"+Usuario+"'" +
+                " and contraseña = '"+Contraseña+"'";
             SqlCommand sqlComand = new SqlCommand(Query, con);
             contador = Convert.ToInt32(sqlComand.ExecuteScalar());
             con.Close();
