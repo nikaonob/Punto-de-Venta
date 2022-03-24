@@ -15,3 +15,4 @@ D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\bin\Debug
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\bin\Debug\Datos.pdb
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto de Venta.csproj.CopyComplete
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.View.Ventana_Principal.resources
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.View.VentanaUsuarios.resources

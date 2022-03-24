@@ -25,5 +25,15 @@ namespace Datos
             con.Close();
             return contador;
         }
+        public DataTable ObtenerUsuarios()
+        {
+            con.Open();
+            string Query = "SELECT * FROM Usuario INNER JOIN Persona on usuario.id = Persona.id_usuario";
+            SqlCommand sqlComand = new SqlCommand(Query, con);
+            SqlDataAdapter datos = new SqlDataAdapter(sqlComand);
+            DataTable Usuarios = new DataTable();
+            datos.Fill(Usuarios);
+            return Usuarios;
+        }
     }
 }

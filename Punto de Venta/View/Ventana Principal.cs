@@ -32,7 +32,10 @@ namespace Punto_de_Venta.View
 
         private void tsmUsuarios_Click(object sender, EventArgs e)
         {
-
+            View.VentanaUsuarios VU = new View.VentanaUsuarios();
+            this.Hide();
+            VU.ShowDialog();
+            this.Show();
         }
     }
 }

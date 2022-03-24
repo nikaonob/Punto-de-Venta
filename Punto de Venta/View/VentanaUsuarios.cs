@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocios;
 
 namespace Punto_de_Venta.View
 {
@@ -15,6 +16,17 @@ namespace Punto_de_Venta.View
         public VentanaUsuarios()
         {
             InitializeComponent();
+        }
+
+        private void dtgUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void VentanaUsuarios_Load(object sender, EventArgs e)
+        {
+            conexionSQLN AgregarUsuarios = new conexionSQLN();
+            dtgUsuarios.DataSource = AgregarUsuarios.devolverListaUsuarios();
         }
     }
 }
