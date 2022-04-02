@@ -73,6 +73,7 @@
             this.tsmAbrirFactura.Name = "tsmAbrirFactura";
             this.tsmAbrirFactura.Size = new System.Drawing.Size(180, 22);
             this.tsmAbrirFactura.Text = "Abrir Factura";
+            this.tsmAbrirFactura.Click += new System.EventHandler(this.tsmAbrirFactura_Click);
             // 
             // tsmUsuarios
             // 

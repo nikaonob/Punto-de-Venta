@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocios;
 
 namespace Punto_de_Venta.View
 {
@@ -36,6 +37,11 @@ namespace Punto_de_Venta.View
             this.Hide();
             VU.ShowDialog();
             this.Show();
+        }
+
+        private void tsmAbrirFactura_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
