@@ -43,5 +43,18 @@ namespace Punto_de_Venta.View
         {
             
         }
+
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inventario Inv = new Inventario();
+            this.Hide();
+            Inv.ShowDialog();
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

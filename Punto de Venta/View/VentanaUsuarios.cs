@@ -88,10 +88,13 @@ namespace Punto_de_Venta.View
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //agregar modificar! 
-            MessageBox.Show(i);
-            conexionSQLN modificar = new conexionSQLN();
-            modificar.ModificarUsuario(txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtDNI.Text,i,txtContraseña.Text);
-            dtgUsuarios.DataSource = modificar.devolverListaUsuarios();
+            if(i != "")
+            {
+                conexionSQLN modificar = new conexionSQLN();
+                modificar.ModificarUsuario(txtNombre.Text, txtApellido.Text, txtTelefono.Text, txtDNI.Text, i, txtContraseña.Text);
+                dtgUsuarios.DataSource = modificar.devolverListaUsuarios();
+            }
+            
         }
 
         private void dtgUsuarios_SelectionChanged(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace Negocios
     public class conexionSQLN
     {
         ConecxionSQL cn = new ConecxionSQL();
-
+        #region Usuarios
         public int consultaloginSQL(string Usuario, string Contraseña)
         {
             return cn.consultalogin(Usuario, Contraseña);
@@ -40,5 +40,12 @@ namespace Negocios
         {
             cn.ModificarUsuario(nom, apell, tel, dni, id,contra);
         }
+        #endregion
+        #region Inventario
+        public DataTable ObtenerInventario()
+        {
+            return cn.ObtenerInventario();
+        }
+        #endregion
     }
 }

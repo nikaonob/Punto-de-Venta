@@ -54,6 +54,7 @@
             this.dtgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuarios.Location = new System.Drawing.Point(12, 12);
             this.dtgUsuarios.Name = "dtgUsuarios";
+            this.dtgUsuarios.ReadOnly = true;
             this.dtgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgUsuarios.Size = new System.Drawing.Size(776, 287);
             this.dtgUsuarios.TabIndex = 0;
