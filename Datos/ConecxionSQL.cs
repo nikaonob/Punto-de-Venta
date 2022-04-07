@@ -123,8 +123,49 @@ namespace Datos
             DataTable miDatatable = new DataTable();
             SqlDataAdapter datos = new SqlDataAdapter(miComand);
             datos.Fill(miDatatable);
+            con.Close();
             return miDatatable;
         }
+        #endregion
+        #region Clientes
+        public DataTable ObtenerClientes()
+        {
+            con.Open();
+            string query = "select * from Clientes";
+            SqlCommand miComand = new SqlCommand(query, con);
+            DataTable miDatatable = new DataTable();
+            SqlDataAdapter datos = new SqlDataAdapter(miComand);
+            datos.Fill(miDatatable);
+            con.Close();
+            return miDatatable;
+        }
+        public int ObtenerClienteConCodigo(int codigo)
+        {
+            
+            con.Open();
+            string query = "select * from Clientes where id = '"+codigo+"'";
+            SqlCommand miComand = new SqlCommand(query, con);
+            DataTable miDatatable = new DataTable();
+            SqlDataAdapter datos = new SqlDataAdapter(miComand);
+            datos.Fill(miDatatable);
+            con.Close();
+            if (miDatatable.Rows.Count == 0)
+            {
+
+               codigo = 0;
+            }
+            else
+            {
+               codigo = int.Parse(miDatatable.Rows[0]["id"].ToString());
+            }
+            con.Close();
+            return codigo;
+        }
+        public void ObtenerCliente(int codigo)///DEVBOLBER CLIENTE
+        {
+
+        }
+
         #endregion
     }
 }

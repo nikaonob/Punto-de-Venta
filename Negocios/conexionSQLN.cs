@@ -47,5 +47,15 @@ namespace Negocios
             return cn.ObtenerInventario();
         }
         #endregion
+        #region Clientes
+        public DataTable ObtenerClientes()
+        {
+            return cn.ObtenerClientes();
+        }
+        public int ObtenerClienteConCodigo(int codigo)
+        {
+            return cn.ObtenerClienteConCodigo(codigo);
+        }
+        #endregion
     }
 }

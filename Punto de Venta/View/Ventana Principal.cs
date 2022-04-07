@@ -56,5 +56,23 @@ namespace Punto_de_Venta.View
         {
 
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clientes cliente = new Clientes();
+            this.Hide();
+            cliente.ShowDialog();
+            this.Show();
+        }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            conexionSQLN con = new conexionSQLN();
+            int codigoCliente = con.ObtenerClienteConCodigo(int.Parse(txtCodigoCliente.Text));
+            if(txtCodigoCliente.Text == codigoCliente.ToString())
+            {
+
+            }
+        }
     }
 }
