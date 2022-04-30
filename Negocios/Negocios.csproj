@@ -49,6 +49,10 @@
       <Project>{6d81e68b-de43-474f-865f-10dc6552c9a7}</Project>
       <Name>Datos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Factura1\Factura1.csproj">
+      <Project>{8f95be0d-5b4b-408c-9620-60c9dd2fac7c}</Project>
+      <Name>Factura1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

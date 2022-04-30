@@ -44,5 +44,11 @@
     <Compile Include="ConecxionSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Factura1\Factura1.csproj">
+      <Project>{8f95be0d-5b4b-408c-9620-60c9dd2fac7c}</Project>
+      <Name>Factura1</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

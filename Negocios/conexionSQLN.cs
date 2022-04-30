@@ -10,10 +10,13 @@ namespace Negocios
 {
     public class conexionSQLN
     {
-        ConecxionSQL cn = new ConecxionSQL();
+        
+        ConecxionSQL cn = new ConecxionSQL();        
+        
         #region Usuarios
         public int consultaloginSQL(string Usuario, string Contraseña)
         {
+            
             return cn.consultalogin(Usuario, Contraseña);
         }
         public DataTable devolverListaUsuarios()
@@ -46,9 +49,14 @@ namespace Negocios
         {
             return cn.ObtenerInventario();
         }
-        #endregion
-        #region Clientes
-        public DataTable ObtenerClientes()
+        public DataTable ObtenerUnArticulo(string codigo)
+        {
+            return cn.ObtenerUnArticulo(codigo);
+        }
+
+            #endregion
+            #region Clientes
+            public DataTable ObtenerClientes()
         {
             return cn.ObtenerClientes();
         }
@@ -56,6 +64,21 @@ namespace Negocios
         {
             return cn.ObtenerClienteConCodigo(codigo);
         }
+        public DataTable ObtenerCliente(int codigo)
+        {
+            return cn.ObtenerCliente(codigo);
+        }
+        #endregion
+        #region Facturacion
+        public string consultarFactura()
+        {
+            return cn.consultaFactura();
+        }
+        public void AgregarFacturaABS(List<Factura1.Factura> listFact)
+        {
+            cn.AgregarFacturaABS(listFact);
+        }
+
         #endregion
     }
 }

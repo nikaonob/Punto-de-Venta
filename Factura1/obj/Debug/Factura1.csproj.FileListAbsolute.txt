@@ -1,0 +1,6 @@
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Factura1\bin\Debug\Factura1.dll
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Factura1\bin\Debug\Factura1.pdb
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Factura1\obj\Debug\Factura1.csproj.AssemblyReference.cache
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Factura1\obj\Debug\Factura1.csproj.CoreCompileInputs.cache
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Factura1\obj\Debug\Factura1.dll
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Factura1\obj\Debug\Factura1.pdb

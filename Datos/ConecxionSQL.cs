@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace Datos
 {
     public class ConecxionSQL
     {
+        
         static string conecionstring = "server= DESKTOP-BC6IL40; database= PuntodeVenta;" +
             " integrated security= true";
         SqlConnection con = new SqlConnection(conecionstring);
@@ -126,6 +128,17 @@ namespace Datos
             con.Close();
             return miDatatable;
         }
+            public DataTable ObtenerUnArticulo(string codigo)
+            {
+            con.Open();
+            string query = "select * from Inventario where codigo = '" + codigo + "'";
+            SqlCommand miComand = new SqlCommand(query, con);
+            DataTable miDatatable = new DataTable();
+            SqlDataAdapter datos = new SqlDataAdapter(miComand);
+            datos.Fill(miDatatable);
+            con.Close();
+            return miDatatable;
+        }
         #endregion
         #region Clientes
         public DataTable ObtenerClientes()
@@ -161,11 +174,55 @@ namespace Datos
             con.Close();
             return codigo;
         }
-        public void ObtenerCliente(int codigo)///DEVBOLBER CLIENTE
+        public DataTable ObtenerCliente(int codigo)
         {
-
+            con.Open();
+            string query = "select * from Clientes where id = '" + codigo + "'";
+            SqlCommand miComand = new SqlCommand(query, con);
+            DataTable miDatatable = new DataTable();
+            SqlDataAdapter datos = new SqlDataAdapter(miComand);
+            datos.Fill(miDatatable);
+            con.Close();
+            return miDatatable;
         }
 
+        #endregion
+        #region Facturacion
+        public string consultaFactura()
+        {
+            
+            con.Open();
+            string query = "Select (Select distinct top 1 NumeroFactura from Facturacion order by NumeroFactura desc) + 1 as NumeroFactura";
+            SqlCommand micomands = new SqlCommand(query, con);
+            SqlDataReader read = micomands.ExecuteReader();            
+            if(read.Read()) // SI esta leyendo algo
+            {
+                return read["NumeroFactura"].ToString();
+                con.Close();
+            }
+            else
+            {
+                return "1";
+                con.Close();
+            }
+           
+        }
+        public void AgregarFacturaABS(List<Factura1.Factura> listFact)
+        {
+            
+            foreach (Factura1.Factura fact in listFact)
+            {
+                con.Open();
+                string query = "insert into Facturacion (Codigo,producto,precioxunidad,cantidad,codigocliente," +
+                    "descuentocliente,montototal,numerofactura) " +
+                    "values ('"+fact.Codigo+"','"+fact.Producto+"',"+Convert.ToDouble(fact.PrecioxUnidad)+","+Convert.ToInt32(fact.Cantidad)+"" +
+                    ",'"+fact.Cliente+"',"+ Convert.ToDouble(fact.ClienteDesc)+","+ Convert.ToDouble(fact.PrecioTotal)+",'"+fact.NumeroFactura+"')";
+                SqlCommand micomando = new SqlCommand(query, con);
+                micomando.ExecuteNonQuery();
+                con.Close();
+            }
+            
+        }
         #endregion
     }
 }

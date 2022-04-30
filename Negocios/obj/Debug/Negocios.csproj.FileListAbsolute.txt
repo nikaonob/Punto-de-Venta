@@ -7,3 +7,5 @@ D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\obj\Debug\Negoc
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\obj\Debug\Negocios.csproj.CopyComplete
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\obj\Debug\Negocios.dll
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\obj\Debug\Negocios.pdb
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\bin\Debug\Factura1.dll
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Negocios\bin\Debug\Factura1.pdb

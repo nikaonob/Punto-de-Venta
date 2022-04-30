@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="View\BusquedaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BusquedaClientes.Designer.cs">
+      <DependentUpon>BusquedaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\BusquedaClientes.resx">
+      <DependentUpon>BusquedaClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +130,10 @@
     <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Factura1\Factura1.csproj">
+      <Project>{8f95be0d-5b4b-408c-9620-60c9dd2fac7c}</Project>
+      <Name>Factura1</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Negocios\Negocios.csproj">
       <Project>{f2fb7a1f-b55a-474d-af87-c1384e237084}</Project>
       <Name>Negocios</Name>

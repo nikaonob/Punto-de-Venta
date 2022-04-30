@@ -4,3 +4,6 @@ D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Datos\obj\Debug\Datos.cs
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Datos\obj\Debug\Datos.dll
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Datos\obj\Debug\Datos.pdb
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Datos\bin\Debug\Factura1.dll
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Datos\bin\Debug\Factura1.pdb
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Datos\obj\Debug\Datos.csproj.CopyComplete

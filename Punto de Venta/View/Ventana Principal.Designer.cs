@@ -30,7 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventana_Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.impuestosVentaYDescuentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.impuestoVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tstxtImpVenta = new System.Windows.Forms.ToolStripTextBox();
+            this.descuentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tstxtDescuento = new System.Windows.Forms.ToolStripTextBox();
             this.tsmUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,8 +49,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnFacturar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,10 +64,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtCodigoCliente = new System.Windows.Forms.TextBox();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,12 +89,66 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.impuestosVentaYDescuentosToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // impuestosVentaYDescuentosToolStripMenuItem
+            // 
+            this.impuestosVentaYDescuentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.impuestoVentaToolStripMenuItem,
+            this.descuentoToolStripMenuItem});
+            this.impuestosVentaYDescuentosToolStripMenuItem.Name = "impuestosVentaYDescuentosToolStripMenuItem";
+            this.impuestosVentaYDescuentosToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.impuestosVentaYDescuentosToolStripMenuItem.Text = "Impuestos Venta Y Descuentos";
+            // 
+            // impuestoVentaToolStripMenuItem
+            // 
+            this.impuestoVentaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tstxtImpVenta});
+            this.impuestoVentaToolStripMenuItem.Name = "impuestoVentaToolStripMenuItem";
+            this.impuestoVentaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.impuestoVentaToolStripMenuItem.Text = "Impuesto Venta";
+            // 
+            // tstxtImpVenta
+            // 
+            this.tstxtImpVenta.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tstxtImpVenta.Name = "tstxtImpVenta";
+            this.tstxtImpVenta.Size = new System.Drawing.Size(100, 23);
+            this.tstxtImpVenta.TextChanged += new System.EventHandler(this.tstxtImpVenta_TextChanged);
+            // 
+            // descuentoToolStripMenuItem
+            // 
+            this.descuentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tstxtDescuento});
+            this.descuentoToolStripMenuItem.Name = "descuentoToolStripMenuItem";
+            this.descuentoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.descuentoToolStripMenuItem.Text = "Descuento";
+            // 
+            // tstxtDescuento
+            // 
+            this.tstxtDescuento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tstxtDescuento.Name = "tstxtDescuento";
+            this.tstxtDescuento.Size = new System.Drawing.Size(100, 23);
+            this.tstxtDescuento.TextChanged += new System.EventHandler(this.tstxtDescuento_TextChanged);
+            // 
             // tsmUsuarios
             // 
             this.tsmUsuarios.Name = "tsmUsuarios";
             this.tsmUsuarios.Size = new System.Drawing.Size(64, 20);
             this.tsmUsuarios.Text = "Usuarios";
             this.tsmUsuarios.Click += new System.EventHandler(this.tsmUsuarios_Click);
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
@@ -179,22 +242,23 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Total";
             // 
-            // label6
+            // lblTotal
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(402, 462);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 55);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "0.00";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(402, 462);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(122, 55);
+            this.lblTotal.TabIndex = 11;
+            this.lblTotal.Text = "0.00";
             // 
-            // textBox1
+            // txtDescuento
             // 
-            this.textBox1.Location = new System.Drawing.Point(254, 383);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 20);
-            this.textBox1.TabIndex = 12;
+            this.txtDescuento.Location = new System.Drawing.Point(254, 383);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.ReadOnly = true;
+            this.txtDescuento.Size = new System.Drawing.Size(37, 20);
+            this.txtDescuento.TabIndex = 12;
             // 
             // label7
             // 
@@ -213,6 +277,7 @@
             this.btnFacturar.TabIndex = 14;
             this.btnFacturar.Text = "Facturar";
             this.btnFacturar.UseVisualStyleBackColor = true;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
             // 
             // label8
             // 
@@ -243,7 +308,8 @@
             // 
             this.txtImpuesVent.Location = new System.Drawing.Point(254, 357);
             this.txtImpuesVent.Name = "txtImpuesVent";
-            this.txtImpuesVent.Size = new System.Drawing.Size(153, 20);
+            this.txtImpuesVent.ReadOnly = true;
+            this.txtImpuesVent.Size = new System.Drawing.Size(37, 20);
             this.txtImpuesVent.TabIndex = 17;
             // 
             // label10
@@ -306,19 +372,6 @@
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
             this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // archivoToolStripMenuItem
-            // 
-            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.archivoToolStripMenuItem.Text = "Archivo";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Punto_de_Venta.Properties.Resources.Caja;
@@ -341,11 +394,46 @@
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             this.btnSalir.MouseHover += new System.EventHandler(this.btnSalir_MouseHover);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(297, 360);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(15, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "%";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(297, 385);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(15, 13);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "%";
+            // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.Location = new System.Drawing.Point(615, 454);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(207, 28);
+            this.btnBuscarProducto.TabIndex = 28;
+            this.btnBuscarProducto.Text = "Buscar Producto";
+            this.btnBuscarProducto.UseVisualStyleBackColor = true;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.Imprimir);
+            // 
             // Ventana_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 561);
+            this.Controls.Add(this.btnBuscarProducto);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnBuscarCliente);
             this.Controls.Add(this.txtCodigoCliente);
             this.Controls.Add(this.label12);
@@ -359,8 +447,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnFacturar);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtDescuento);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -401,8 +489,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.Label label8;
@@ -418,5 +506,14 @@
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem impuestosVentaYDescuentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem impuestoVentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox tstxtImpVenta;
+        private System.Windows.Forms.ToolStripMenuItem descuentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox tstxtDescuento;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnBuscarProducto;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

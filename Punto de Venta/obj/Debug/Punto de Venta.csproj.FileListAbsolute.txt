@@ -18,3 +18,6 @@ D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.View.VentanaUsuarios.resources
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.View.Inventario.resources
 D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.View.Clientes.resources
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\obj\Debug\Punto_de_Venta.View.BusquedaClientes.resources
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\bin\Debug\Factura1.dll
+D:\pc1\escritorio\Programacion\PROGRAMAS\Punto de Venta\Punto de Venta\bin\Debug\Factura1.pdb
