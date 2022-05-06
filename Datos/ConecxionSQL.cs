@@ -192,13 +192,14 @@ namespace Datos
         {
             
             con.Open();
-            string query = "Select (Select distinct top 1 NumeroFactura from Facturacion order by NumeroFactura desc) + 1 as NumeroFactura";
+            string query = "Select distinct top 1 NumeroFactura from Facturacion order by NumeroFactura desc";
             SqlCommand micomands = new SqlCommand(query, con);
             SqlDataReader read = micomands.ExecuteReader();            
             if(read.Read()) // SI esta leyendo algo
             {
-                return read["NumeroFactura"].ToString();
-                con.Close();
+                int n = int.Parse(read["NumeroFactura"].ToString()) + 1;
+                return n.ToString();
+
             }
             else
             {
@@ -213,10 +214,10 @@ namespace Datos
             foreach (Factura1.Factura fact in listFact)
             {
                 con.Open();
-                string query = "insert into Facturacion (Codigo,producto,precioxunidad,cantidad,codigocliente," +
-                    "descuentocliente,montototal,numerofactura) " +
-                    "values ('"+fact.Codigo+"','"+fact.Producto+"',"+Convert.ToDouble(fact.PrecioxUnidad)+","+Convert.ToInt32(fact.Cantidad)+"" +
-                    ",'"+fact.Cliente+"',"+ Convert.ToDouble(fact.ClienteDesc)+","+ Convert.ToDouble(fact.PrecioTotal)+",'"+fact.NumeroFactura+"')";
+                string query = "insert into Facturacion (Codigo,precioxunidad,cantidad,codigocliente," +
+                    "descuentocliente,montototal,numerofactura,fecha,producto) " +
+                    "values ('"+fact.Codigo+"','"+Convert.ToDouble(fact.PrecioxUnidad)+"',"+Convert.ToInt32(fact.Cantidad)+"" +
+                    ",'"+fact.Cliente+"','"+ Convert.ToDouble(fact.ClienteDesc)+"','"+ Convert.ToDouble(fact.PrecioTotal)+"','"+fact.NumeroFactura+"',"+ fact.Fecha.ToString("dd-MM-yyyy")+ ",'" + fact.Producto + "')";
                 SqlCommand micomando = new SqlCommand(query, con);
                 micomando.ExecuteNonQuery();
                 con.Close();

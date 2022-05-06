@@ -18,6 +18,7 @@ namespace Factura1
         public string Cliente { get; set; }
         public string ClienteDesc { get; set; }
         public string NumeroFactura { get; set; }
+        public DateTime Fecha { get; set; }
 
     }
 }

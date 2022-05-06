@@ -70,6 +70,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -426,11 +428,30 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.Imprimir);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(425, 32);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 13);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "Fecha";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(468, 32);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(0, 13);
+            this.lblFecha.TabIndex = 30;
+            // 
             // Ventana_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 561);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.btnBuscarProducto);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label6);
@@ -515,5 +536,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnBuscarProducto;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblFecha;
     }
 }

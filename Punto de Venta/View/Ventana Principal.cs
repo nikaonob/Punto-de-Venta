@@ -24,6 +24,7 @@ namespace Punto_de_Venta.View
             dt.Columns.Add("Codigo"); dt.Columns.Add("Producto"); dt.Columns.Add("Precio x Unidad");
             dt.Columns.Add("Cantidad"); dt.Columns.Add("Descuento"); dt.Columns.Add("Precio Total");
             dtgPrincipal.DataSource = dt;
+            lblFecha.Text = DateTime.Now.ToString("dd-MM-yyyy");
 
             conexionSQLN con = new conexionSQLN();
             txtNFactura.Text = con.consultarFactura();
@@ -217,6 +218,7 @@ namespace Punto_de_Venta.View
 
         private void btnFacturar_Click(object sender, EventArgs e)
         {
+            #region Validaciones
             string validarCodigoCliente(string cc)
             {
                 if(cc == "")
@@ -229,23 +231,40 @@ namespace Punto_de_Venta.View
                 }
 
             }
-            
+            string vaildarNconComa(string num)
+            {
+                try
+                {
+                    string[] elNum = num.Split(',');
+                    num = elNum[0] + "." + elNum[1];
+                }
+                catch
+                {
+
+                }
+                
+                return num;
+            }
+            #endregion
+
             conexionSQLN cn = new conexionSQLN();
             Factura1.Factura fact;
             List<Factura1.Factura> listfac = new List<Factura1.Factura>();
+            DateTime fechadeFacturacion = DateTime.Now;
             foreach (DataRow row in dt.Rows)
             {
                 fact = new Factura1.Factura();
                 fact.Codigo = row["Codigo"].ToString();
                 fact.Producto = row["Producto"].ToString();
-                fact.PrecioxUnidad = row["Precio x Unidad"].ToString();
+                fact.PrecioxUnidad = vaildarNconComa(row["Precio x Unidad"].ToString());
                 fact.Cantidad = row["Cantidad"].ToString();
                 fact.Descuento = row["Descuento"].ToString();
-                fact.PrecioTotal = row["Precio Total"].ToString();
+                fact.PrecioTotal = vaildarNconComa(row["Precio Total"].ToString());
                 fact.Cliente = validarCodigoCliente(txtCodigoCliente.Text);
-                fact.ClienteDesc = txtDescuento.Text;
+                fact.ClienteDesc = vaildarNconComa(txtDescuento.Text);
                 fact.Codigo = row["Codigo"].ToString();
                 fact.NumeroFactura = txtNFactura.Text;
+                fact.Fecha = fechadeFacturacion;
                 listfac.Add(fact);
 
             }
@@ -265,7 +284,26 @@ namespace Punto_de_Venta.View
             int ancho = 550;
             int y = 30;
 
-            e.Graphics.DrawString("------Punto de Venta------", font, Brushes.Black, new RectangleF(0, y + 20, ancho, 20));
+            e.Graphics.DrawString("------Punto de Venta------", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Numero de Factura#"+txtNFactura.Text, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Cliente: "+txtCliente.Text, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("Fecha: "+ DateTime.Now.ToString(), font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("--------Productos---------", font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            foreach (DataRow miRow in dt.Rows)
+            {
+                e.Graphics.DrawString(
+                    miRow["Codigo"].ToString() + " "+
+                    miRow["Producto"].ToString() + " $:" +
+                    miRow["Precio x Unidad"].ToString() + " Cant." +
+                    miRow["Cantidad"].ToString() + " Desc " +
+                    miRow["Descuento"].ToString() + "% Total:" +
+                    miRow["Precio Total"].ToString() + " "
+                    , font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            }
+            e.Graphics.DrawString("---------------------------", font, Brushes.Black, new RectangleF(0, y += 30, ancho, 20));
+            e.Graphics.DrawString("--Total: $"+lblTotal.Text, font, Brushes.Black, new RectangleF(0, y += 20, ancho, 20));
+            e.Graphics.DrawString("--Gracias por su visita----", font, Brushes.Black, new RectangleF(0, y += 40, ancho, 20));
+
         }
     }
 }
